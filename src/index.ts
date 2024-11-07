@@ -12,7 +12,7 @@ app.get("/ping", (_req, res) =>{
 });
 
 
-app.use("/api/documents", documentsRouter);
+app.use("/api", documentsRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
