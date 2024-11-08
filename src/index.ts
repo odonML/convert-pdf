@@ -1,12 +1,16 @@
+
 import express from 'express';
 import documentsRouter from './router/documents';
 const app = express();
 
+
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 
 const PORT = 3001;
-app.get("/ping", (_req, res) =>{
+
+app.post("/ping", (_req, res) =>{
   console.log("alguien ha hecho un ping");
   res.send("pong"); 
 });
